@@ -4,6 +4,6 @@
 -- This script can be executed on any database
 SELECT band_name, IF(split IS NULL, YEAR(CURDATE())-formed, split-formed) AS lifespan
 	FROM metal_bands
-	WHERE find_in_set('Glam rock', `style`)
+	WHERE style LIKE '%Glam rock%'
 	ORDER BY lifespan DESC;
 
