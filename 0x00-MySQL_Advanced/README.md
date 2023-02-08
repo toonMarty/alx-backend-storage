@@ -23,3 +23,12 @@ a SQL script that ranks country origins of bands, ordered by the number of (non-
 * Import this table dump: metal_bands.sql.zip
 * Column names are: origin and nb_fans
 * This script can be executed on any database
+
+# 3. Old school band
+A SQL script that lists all bands with Glam rock as their main style, ranked by their longevity
+
+### Requirements:
+* Column names are: band_name and lifespan (in years)
+* This script uses attributes formed and split for computing the lifespan
+* This script can be executed on any database
+
