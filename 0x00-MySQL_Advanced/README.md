@@ -1,6 +1,18 @@
 This directory contains a project on advanced mySQL concepts
-# We are all unique!
+# 0. We are all unique!
 This task creates a table users with attributes:
 * id, integer, never null, auto increment and primary key
 * email, string (255 characters), never null and unique
-* name, string (255 characters) 
+* name, string (255 characters)
+
+
+# 1. In and not out
+This task creates a SQL script that creates a table users following the requirements:
+
+<h2>With these attributes:</h2>
+* id, integer, never null, auto increment and primary key
+* email, string (255 characters), never null and unique
+* name, string (255 characters)
+* country, enumeration of countries: US, CO and TN, never null (= default will be the first element of the enumeration, here US)
+
+
