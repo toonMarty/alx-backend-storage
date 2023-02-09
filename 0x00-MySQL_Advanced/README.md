@@ -32,3 +32,6 @@ A SQL script that lists all bands with Glam rock as their main style, ranked by 
 * This script uses attributes formed and split for computing the lifespan
 * This script can be executed on any database
 
+# 4. Buy buy buy
+a SQL script that creates a trigger that decreases the quantity of an item after adding a new order.
+Quantity in the table items can be negative.
