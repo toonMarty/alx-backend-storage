@@ -35,3 +35,6 @@ A SQL script that lists all bands with Glam rock as their main style, ranked by 
 # 4. Buy buy buy
 a SQL script that creates a trigger that decreases the quantity of an item after adding a new order.
 Quantity in the table items can be negative.
+
+# 5. Email validation to sent
+a SQL script that creates a trigger that resets the attribute valid_email only when the email has been changed.
