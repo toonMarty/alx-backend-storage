@@ -9,8 +9,13 @@ DELIMITER $$
 CREATE PROCEDURE AddBonus(user_id INTEGER, project_name VARCHAR(255), score INTEGER)
 BEGIN
 
-	INSERT INTO projects(name)VALUES(project_name);
-	SET @latest_project = LAST_INSERT_ID();
-	INSERT INTO corrections VALUES(user_id, @latest_project, score);
+	INSERT INTO projects(name)
+	SELECT * FROM (SELECT project_name) As tmp 
+	WHERE NOT EXISTS (
+		SELECT name FROM projects WHERE name = project_name
+	) LIMIT 1;
+	 SET @projectID = (SELECT id FROM projects WHERE name=project_name);
+	INSERT INTO corrections VALUES(user_id, @projectID, score);
 END$$
 DELIMITER ;
+
