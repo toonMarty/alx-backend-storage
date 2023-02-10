@@ -47,3 +47,8 @@ a SQL script that creates a stored procedure AddBonus that adds a new correction
 * user_id, a users.id value (you can assume user_id is linked to an existing users)
 * project_name, a new or already exists projects - if no projects.name found in the table, you should create it
 * score, the score value for the correction
+
+# 7. Calculating the Average Score using a stored procedure
+a SQL script that creates a stored procedure ComputeAverageScoreForUser that computes and store the average score for a student. 
+*** Note: An average score can be a decimal ***
+
