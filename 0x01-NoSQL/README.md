@@ -43,3 +43,10 @@ A Python function that lists all documents in a collection:
 * Prototype: def list_all(mongo_collection):
 * The function returns an empty list if there's no document in the collection
 * mongo_collection will be the pymongo collection object
+
+# 9. Insert a document in Python
+A Python function that inserts a new document in a collection based on kwargs:
+
+* Prototype: def insert_school(mongo_collection, **kwargs):
+* mongo_collection is a pymongo collection object
+* Returns the new _id
