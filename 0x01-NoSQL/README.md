@@ -19,3 +19,8 @@ A script that lists all documents in the collection school:
 A script that lists all documents with name="Holberton school" in the collection school:
 
 * The database name will be passed as option of mongo command
+
+# 5. Count
+A script that displays the number of documents in the collection school:
+
+* The database name will be passed as option of mongo command
