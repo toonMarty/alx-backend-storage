@@ -24,3 +24,10 @@ A script that lists all documents with name="Holberton school" in the collection
 A script that displays the number of documents in the collection school:
 
 * The database name will be passed as option of mongo command
+
+# 6. Update
+A script that adds a new attribute to a document in the collection school:
+
+* The script updates only document with name="Holberton school" (all of them)
+* The update adds the attribute address with the value “972 Mission street”
+* The database name will be passed as option of mongo command
