@@ -31,3 +31,8 @@ A script that adds a new attribute to a document in the collection school:
 * The script updates only document with name="Holberton school" (all of them)
 * The update adds the attribute address with the value “972 Mission street”
 * The database name will be passed as option of mongo command
+
+#7. Delete by match
+A script that deletes all documents with name="Holberton school" in the collection school:
+
+* The database name will be passed as option of mongo command
