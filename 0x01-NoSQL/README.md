@@ -50,3 +50,11 @@ A Python function that inserts a new document in a collection based on kwargs:
 * Prototype: def insert_school(mongo_collection, **kwargs):
 * mongo_collection is a pymongo collection object
 * Returns the new _id
+
+# 10. Change school topics
+A Python function that changes all topics of a school document based on the name:
+
+* Prototype: def update_topics(mongo_collection, name, topics):
+* mongo_collection is the pymongo collection object
+* name (string) is the school name to update
+* topics (list of strings) is the list of topics approached in the school
