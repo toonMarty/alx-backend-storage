@@ -32,7 +32,14 @@ A script that adds a new attribute to a document in the collection school:
 * The update adds the attribute address with the value “972 Mission street”
 * The database name will be passed as option of mongo command
 
-#7. Delete by match
+# 7. Delete by match
 A script that deletes all documents with name="Holberton school" in the collection school:
 
 * The database name will be passed as option of mongo command
+
+# 8. List all documents in python
+A Python function that lists all documents in a collection:
+
+* Prototype: def list_all(mongo_collection):
+* The function returns an empty list if there's no document in the collection
+* mongo_collection will be the pymongo collection object
