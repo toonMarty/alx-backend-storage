@@ -32,6 +32,5 @@ class Cache:
         """
         key = str(uuid.uuid4())  # generate a random key
         value = data
-        redis_instance = redis.Redis()
-        redis_instance.set(key, value)
+        self._redis.set(key, value)
         return key
