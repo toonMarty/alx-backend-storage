@@ -76,3 +76,11 @@ A Python script that provides some stats about Nginx logs stored in MongoDB:
 A script that lists all documents with name starting by Holberton in the collection school:
 
 * The database name will be passed as option of mongo command
+
+# 14. Top students
+A Python function that returns all students sorted by average score:
+
+* Prototype: def top_students(mongo_collection):
+* mongo_collection will be the pymongo collection object
+* The top is ordered
+* The average score is part of each item returns with key = averageScore
