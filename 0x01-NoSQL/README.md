@@ -71,3 +71,8 @@ A Python script that provides some stats about Nginx logs stored in MongoDB:
 
 * Database: logs
 * Collection: nginx
+
+#13. Regex filter
+A script that lists all documents with name starting by Holberton in the collection school:
+
+* The database name will be passed as option of mongo command
