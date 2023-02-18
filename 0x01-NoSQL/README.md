@@ -84,3 +84,8 @@ A Python function that returns all students sorted by average score:
 * mongo_collection will be the pymongo collection object
 * The top is ordered
 * The average score is part of each item returns with key = averageScore
+
+# 15. Log stats - new version
+Improving 12-log_stats.py by adding the top 10 of the most present IPs in the collection nginx of the database logs:
+
+* The IPs top must be sorted (like the example below)
