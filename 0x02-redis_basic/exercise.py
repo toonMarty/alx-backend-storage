@@ -34,3 +34,48 @@ class Cache:
         value = data
         self._redis.set(key, value)
         return key
+
+    def get(self, key: str,
+            fn: Optional[Callable] = None) -> Union[str, bytes, int, float]:
+        """
+        This method takes a key string argument and an optional
+        Callable argument named fn
+        Args:
+            key: the key that holds data
+            fn: a callable used to convert the data back to the desired format
+        Return:
+             value(str, bytes, int, float): the value
+        """
+        value = self._redis.get(key)
+
+        if fn:
+            value = fn(value)
+        return value
+
+    def get_str(self, key: str) -> str:
+        """
+        This method automatically parameterizes Cache.get
+        with a string conversion method
+        Args:
+            key: the key that holds data
+        Return:
+             data(int) as a string decoded using utf-8
+        """
+        value = self._redis.get(key)
+        return value.decode('utf-8')
+
+    def get_int(self, key: str) -> int:
+        """
+        This method automatically parameterizes Cache.get
+        with an int conversion method
+        Args:
+            key: the key that holds data
+        Return:
+            data as an int decoded using utf-8
+        """
+        value = self._redis.get(key)
+        try:
+            value = int(value.decode('utf-8'))
+        except Exception:
+            value = 0
+        return value
