@@ -5,6 +5,29 @@ This module contains a class, Cache
 import redis
 import uuid
 from typing import Union, Optional, Callable
+import functools
+
+
+def count_calls(method: Callable) -> Callable:
+    """
+    This function counts how many times a
+    function has been called. This function
+    will then be used as a decorator in
+    the store method of Cache class
+    Args:
+        method (Callable): the method which has been called
+    Return:
+        increment(Callable): a wrapper function that
+        handles the counting
+    """
+    @functools.wraps(method)
+    def increment(self, *args):
+        """The increment wrapper function"""
+        name = method.__qualname__
+        redis_instance = redis.Redis()
+        result = redis_instance.incr(name, amount=1)
+        return result
+    return increment
 
 
 class Cache:
@@ -20,6 +43,7 @@ class Cache:
         self._redis = redis.Redis()
         self._redis.flushdb()
 
+    @count_calls
     def store(self, data: Union[str, bytes, int, float]) -> str:
         """
         This method takes a data argument and returns a string.
