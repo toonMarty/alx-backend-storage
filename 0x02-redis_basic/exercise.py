@@ -4,7 +4,7 @@ This module contains a class, Cache
 """
 import redis
 import uuid
-from typing import Union, Optional
+from typing import Union, Optional, Callable
 
 
 class Cache:
