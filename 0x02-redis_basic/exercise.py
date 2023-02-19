@@ -24,8 +24,7 @@ def count_calls(method: Callable) -> Callable:
     def increment(self, *args):
         """The increment wrapper function"""
         name = method.__qualname__
-        redis_instance = self._redis
-        result = redis_instance.incr(name, amount=1)
+        result = self._redis.incr(name, amount=1)
         return result
     return increment
 
